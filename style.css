@@ -222,6 +222,19 @@ img {
     background: white;
     padding: 5px;
     border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.qrcode img {
+    max-width: 100px;
+    display: block;
+    margin: 0 auto; /* Força o alinhamento central */
+    background: #fff;
+    padding: 5px;
+    border-radius: 4px;
 }
 
 /* BOTÃO WHATSAPP FIXO FLUTUANTE */
@@ -242,6 +255,8 @@ img {
     z-index: 9999;
     transition: transform 0.3s ease;
     animation: pulse 2s infinite;
+    text-decoration: none !important;
+    border: none;
 }
 
 .btn-whatsapp:hover {
@@ -256,7 +271,7 @@ img {
     100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
 }
 
-/* MEDIA QUERIES (RESPONSIVIDADE PARA TELAS MAIORES) */
+/* MEDIA QUERIES (RESPONSIVIDADE PARA TELAS MENORES) */
 @media (min-width: 768px) {
     .hero-grid {
         grid-template-columns: 1.2fr 1.8fr;
@@ -282,4 +297,22 @@ img {
     .qr-col {
         justify-content: flex-end;
     }
+
+}
+
+/* MEDIA QUERIES (RESPONSIVIDADE PARA TELAS MENORES) */
+@media (max-width: 767px) {
+
+    .qr-col {
+        display: flex;
+        justify-content: center;
+    }
+   
+.qrcode {
+	margin-top: 0;
+    }
+    .qrcode img { 
+        margin: 0 auto; 
+    }
+
 }
